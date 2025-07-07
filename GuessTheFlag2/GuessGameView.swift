@@ -24,13 +24,14 @@ struct GuessGameView: View {
       let isLandscape = geo.size.width > geo.size.height
       
       ZStack {
-        Color.secondary.ignoresSafeArea()
+        RadialGradient(colors: [.white, .gray], center: .center, startRadius: 50, endRadius: 300)
+            .ignoresSafeArea()
         
         VStack(spacing: 20) {
           Text(options.isEmpty ? "???" : options[correctAnswer])
             .font(.headline)
             .fontWeight(.bold)
-            .foregroundStyle(.white)
+            .foregroundStyle(.black)
             .padding(.top, 15)
           
           Group {
@@ -43,7 +44,7 @@ struct GuessGameView: View {
           
           Text("Tap the Correct Flag")
             .font(.footnote)
-            .foregroundStyle(.white)
+            .foregroundStyle(.regularMaterial)
             .padding(.bottom, 5)
         }
         .padding(.horizontal)
