@@ -10,38 +10,65 @@ import SwiftUI
 struct ContentView: View {
   var countries = ["Estonia","France","Germany","Ireland", "Italy","Monaco","Nigeria", "Poland", "Spain", "UK","Ukraine","US"]
   var correctAnswer = Int.random(in: 0...2)
+  var flagButtons: some View {
+    ForEach(0..<3) { number in
+      Button {
+      } label: {
+        Image(countries[number])
+          .resizable()
+          .scaledToFit()
+          .frame(width: 150, height: 100)
+          .clipShape(RoundedRectangle(cornerRadius: 8))
+          .shadow(radius: 10)
+      }
+      .padding(.vertical, 5)
+    }
+  }
+  
   var body: some View {
-    
-    ZStack {
-      Color.gray
-        .ignoresSafeArea()
-      VStack(spacing: 30) {
-        VStack {
-          Text(countries[correctAnswer])
-            .font(.headline)
-            .fontWeight(.bold)
-            .foregroundStyle(.white)
-            .padding()
-          
-          ForEach (0..<3) { number in
-            Button{
-              
-            } label: {
-              Image(countries[number])
-            }.padding()
+    GeometryReader { geometry in
+      let isLandscapeMode = geometry.size.width > geometry.size.height
+      ZStack {
+        Color.secondary
+          .ignoresSafeArea()
+        
+        VStack(spacing: 20) {
+          VStack {
+            Text(countries[correctAnswer])
+              .font(.headline)
+              .fontWeight(.bold)
+              .foregroundStyle(.white)
+              .padding(.top,15)
+            Group {
+              if isLandscapeMode {
+                HStack(spacing: 16) {
+                  flagButtons
+                }
+              } else {
+                VStack(spacing: 16) {
+                  flagButtons
+                }
+              }
+            }
+            
+            
+            
+            Text("Tap the Correct Flag")
+              .font(.footnote)
+              .foregroundStyle(.white)
+              .padding(.bottom,5)
           }
-          
-          Text("Tap the Correct Flag")
-            .font(.footnote).foregroundStyle(.white)
-            .padding()
-          
-          
+          .padding(.horizontal)
         }
       }
     }
   }
 }
 
+
+
+
 #Preview {
   ContentView()
 }
+
