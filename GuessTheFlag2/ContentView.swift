@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-  var countries = ["Estonia","France","Germany","Ireland", "Italy","Monaco","Nigeria", "Poland", "Spain", "UK","Ukraine","US"]
+  var countries = ["United Kingdom","United States","Monaco","Ukraine","Estonia","France","Germany","Ireland", "Italy","Nigeria", "Poland", "Spain"]
   var correctAnswer = Int.random(in: 0...2)
   var flagButtons: some View {
     ForEach(0..<3) { number in
