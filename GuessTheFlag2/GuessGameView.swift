@@ -24,12 +24,12 @@ struct GuessGameView: View {
       let isLandscape = geo.size.width > geo.size.height
       
       ZStack {
-        RadialGradient(colors: [.white, .gray], center: .center, startRadius: 50, endRadius: 300)
+        RadialGradient(colors: [.white, .gray], center: .center, startRadius: 10, endRadius: 160)
             .ignoresSafeArea()
         
         VStack(spacing: 20) {
           Text(options.isEmpty ? "???" : options[correctAnswer])
-            .font(.headline)
+            .font(.largeTitle)
             .fontWeight(.bold)
             .foregroundStyle(.black)
             .padding(.top, 15)
@@ -38,7 +38,7 @@ struct GuessGameView: View {
             if isLandscape {
               HStack(spacing: 30) { flagButtons }
             } else {
-              VStack(spacing: 30) { flagButtons }
+              VStack(spacing: 60) { flagButtons }
             }
           }
           
@@ -46,7 +46,7 @@ struct GuessGameView: View {
             .font(.footnote)
             .foregroundStyle(.regularMaterial)
             .padding(.bottom, 5)
-        }
+        }.background(.ultraThinMaterial)
         .padding(.horizontal)
         
         if showResult {
