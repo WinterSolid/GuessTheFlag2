@@ -21,10 +21,11 @@ A simple SwiftUI game that challenges users to identify the correct flag from a 
 
 | Portrait | Landscape |
 |---------|-----------|
- ![Portrait Mode](https://github.com/user-attachments/assets/abed2468-a3d7-4f97-b74e-cb41cc7dd342)
- ![Portrait Mode](https://github.com/user-attachments/assets/7a95e3ea-f301-49e1-bde9-bf0f0aad6fed)
- ![Landscape Mode](https://github.com/user-attachments/assets/81d9c341-32c1-4bb2-9129-b0de291f2110)
- ![Landscape Mode](https://github.com/user-attachments/assets/c0cc222b-f73b-47b2-8552-5071a6d2a101)
+ ![Portrait Mode](https://github.com/user-attachments/assets/2d8b195c-ae54-42c2-b1e2-ac38afa059cf) 
+ 
+ ![Landscape Mode](https://github.com/user-attachments/assets/a09e8c9e-e53d-4575-9a3c-9511e78b9f3e) 
+ 
+
 
 
 ## Getting Started
