@@ -83,8 +83,8 @@ struct GuessGameView: View {
         Image(options[index])
           .resizable()
           .scaledToFit()
-          .frame(width: 150, height: 100)
-          .clipShape(RoundedRectangle(cornerRadius: 8))
+          .frame(width: 200, height: 100)
+          .clipShape(.circle)
           .shadow(radius: 10)
       }
     }
