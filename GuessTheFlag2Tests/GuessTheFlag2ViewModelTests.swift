@@ -1,6 +1,5 @@
 //
 //  GuessTheFlag2Tests.swift
-//
 //  Created by Zakee Tan on 7/9/25.
 //
 import XCTest
