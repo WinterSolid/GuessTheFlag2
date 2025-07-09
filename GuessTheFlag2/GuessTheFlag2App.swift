@@ -2,7 +2,7 @@
 //  GuessTheFlag2App.swift
 //  GuessTheFlag2
 //
-//  Created by Zakee Tanksley on 7/7/25.
+//  Created by Zakee Tan on 7/7/25.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct GuessTheFlag2App: App {
     var body: some Scene {
         WindowGroup {
-            GuessGameView()
+            GuessTheFlag2View()
         }
     }
 }
